@@ -1,4 +1,4 @@
-# Methodologies of Software Development Lab #3
+# Methodologies of Software Development Lab #4
 
 A simple console-based application for task managment. You can use it for convenient managing of the tasks that need to be done. With this app you will be able to create, view and edit your tasks through command line interface
 
@@ -6,6 +6,7 @@ A simple console-based application for task managment. You can use it for conven
 1. You need [NodeJs](https://nodejs.org/) and [NPM](https://www.npmjs.com/) installed 
 ```
 sudo yum install nodejs
+sudo yum install npm
 ```
 2. Clone the repository to your machine
 ```
@@ -27,7 +28,7 @@ npm test
 ## Usage
 To use the application you need to run it with one of the options. There are 8 different options avialable. Some of them can be used only with several values provided. Also for using some commands you will need to identify the task with its id. You can see all tasks id`s by using such commands as: show, all, burned.
 
-## Options list
+### Options list:
 1. **show**
 <br>To see all unfinished tasks sorted by deadline distance
 ```
