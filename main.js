@@ -21,7 +21,7 @@ function unformatDate(dateStr) {
     await db.config()
 
     const args = new Map();
-    args.set('action', proc.argv[2]);
+    args.set('action', proc.argv[2] ? proc.argv[2] : 'help');
     for (let i = 3; i < proc.argv.length; i++) {
         val = proc.argv[i];
         args.set(val.split('=')[0], val.split('=')[1]);
@@ -77,12 +77,12 @@ function unformatDate(dateStr) {
             db.delete(+args.get('id'));
         },
         help() {
-            console.log('NO');
+            console.log('See documentation:\nhttps://github.com/Rabotiagi/MSE_Lab4/blob/master/README.md');
         }
     }
 
     try {
-         commands[args.get('action')]();
+        commands[args.get('action')]();
     } catch (err) {
         console.log('Syntax error. See help');
     }
