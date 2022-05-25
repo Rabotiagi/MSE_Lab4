@@ -46,8 +46,13 @@ class DB {
             id: ++this.#CURRENT_ID,
             title: taskData.title,
             desc: taskData.desc,
-            deadline: taskData.deadline
+            deadline: taskData.deadline,
+            complete: false
         });
+    }
+
+    get() {
+        return this.#TASKS;
     }
 
     find(id) {
@@ -62,7 +67,7 @@ class DB {
         const index = this.#TASKS.indexOf(task);
 
         for(let prop in newData){
-            task[prop] = newData[prop]
+            task[prop] = newData[prop] ? newData[prop] : task[prop]
         }
 
         this.#TASKS[index] = task
@@ -73,7 +78,7 @@ class DB {
         const taskToDelete = this.#TASKS.find(task => task.id === id);
         const index = this.#TASKS.indexOf(taskToDelete);
 
-        this.#TASKS.splice(index, 1);
+        this.#TASKS.splice(index, index != -1 ? 1 : 0);
     }
 
     async lockData() {
