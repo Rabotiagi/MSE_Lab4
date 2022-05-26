@@ -46,7 +46,8 @@ class DB {
             id: ++this.#CURRENT_ID,
             title: taskData.title,
             desc: taskData.desc,
-            deadline: taskData.deadline
+            deadline: taskData.deadline,
+            completed: false
         });
     }
 
