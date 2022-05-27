@@ -9,7 +9,7 @@ const checkErrorCode = (err, code) => {
 
 const checkIdType = (id) => {
     if(typeof id !== 'number' || id === NaN){
-        console.log('Error: invalid ID was passed');
+        throw new Error('Invalid ID type');
     }
 };
 
@@ -47,7 +47,7 @@ class DB {
             title: taskData.title,
             desc: taskData.desc,
             deadline: taskData.deadline,
-            complete: false
+            completed: false
         });
     }
 
@@ -64,6 +64,7 @@ class DB {
     update(id, newData) {
         checkIdType(id);
         const task = this.#TASKS.find(task => task.id === id);
+        if(!task) return;
         const index = this.#TASKS.indexOf(task);
 
         for(let prop in newData){
