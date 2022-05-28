@@ -17,7 +17,7 @@
     "url": "https://github.com/Rabotiagi/MSE_Lab4/issues"
   },
   "homepage": "https://github.com/Rabotiagi/MSE_Lab4#readme",
-  "dependencies": {
+  "devDependencies": {
     "jest": "^28.1.0"
   }
 }
