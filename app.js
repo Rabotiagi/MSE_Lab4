@@ -113,18 +113,18 @@ class App {
 }
 
 
-(async () => {
-    const db = new DB();
+// (async () => {
+//     const db = new DB();
 
-    const args = new Map();
-    args.set('action', proc.argv[2] ? proc.argv[2] : 'help');
-    for (let i = 3; i < proc.argv.length; i++) {
-        val = proc.argv[i];
-        args.set(val.split('=')[0], val.split('=')[1]);
-    }
+//     const args = new Map();
+//     args.set('action', proc.argv[2] ? proc.argv[2] : 'help');
+//     for (let i = 3; i < proc.argv.length; i++) {
+//         val = proc.argv[i];
+//         args.set(val.split('=')[0], val.split('=')[1]);
+//     }
     
-    const app = new App(db, args);
-    await app.run();
-})();
+//     const app = new App(db, args);
+//     await app.run();
+// })();
 
 module.exports = App;

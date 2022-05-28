@@ -12,17 +12,9 @@ sudo yum install npm
 ```
 git clone https://github.com/Rabotiagi/MSE_Lab4.git
 ```
-3. Install dependencies by runnig command in the project root directory
-```
-npm install
-```
-4. To run the app type 
+3. To run the app, uncomment lines 116-128 in app.js file, and in root directory type
 ```
 node app.js [options]
-```
-5. To run the test, at first comment lines 116-128 in app.js file and then type 
-```
-npm test
 ```
 
 ## Usage
@@ -68,4 +60,16 @@ node app.js id="[id]"
 <br>Provides a link for documentation (this page)
 ```
 node app.js help
+```
+
+## Tests
+For tests to work properly make sure that lines 116-128 in app.js file are commented out
+
+At first, install dependencies by runnig command in the project root directory
+```
+npm install
+```
+Then you can run tests by typing
+```
+npm test
 ```
