@@ -18,9 +18,9 @@ npm install
 ```
 4. To run the app type 
 ```
-node main.js [options]
+node app.js [options]
 ```
-5. To run tests you can type 
+5. To run the test, at first comment lines 116-128 in app.js file and then type 
 ```
 npm test
 ```
@@ -32,40 +32,40 @@ To use the application you need to run it with one of the options. There are 8 d
 1. **show**
 <br>To see all unfinished tasks sorted by deadline distance
 ```
-node main.js show
+node app.js show
 ```
 2. **all**
 <br>To see all the tasks
 ```
-node main.js all
+node app.js all
 ```
 3. **complete**
 <br>To mark the task as complete (id - required)
 ```
-node main.js complete id="[id]"
+node app.js complete id="[id]"
 ```
 4. **add**
 <br>To add the new task (title - required, desc - optional, deadline - optional)
 ```
-node main.js add title="[title]" desc="[desc]" deadline="[deadline]"
+node app.js add title="[title]" desc="[desc]" deadline="[deadline]"
 ```
 5. **edit**
 <br>To edit an existing task (id - required, title - optional, desc - optional, deadline - optional)
 ```
-node main.js edit id="[id]" title="[title]" desc="[desc]" deadline="[deadline]"
+node app.js edit id="[id]" title="[title]" desc="[desc]" deadline="[deadline]"
 ```
 6. **burned**
 <br>To see the tasks with a missed deadline
 ```
-node main.js burned
+node app.js burned
 ```
 7. **delete**
 <br>To delete a task (id - required)
 ```
-node main.js id="[id]"
+node app.js id="[id]"
 ```
 8. **help**
 <br>Provides a link for documentation (this page)
 ```
-node main.js help
+node app.js help
 ```
